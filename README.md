@@ -1,11 +1,10 @@
-
 ## KiceCore Unbuntu 18.04 Deploy Guide
 
 **Install 목록** 
 1. vagrant 설치
-2. tomcat 9 설치
+2. tomcat 9 설치 (war file 필요, maven 필요)
 3. jdk1.8 설치
-4. nginx 설치
+4. nginx 설치 (업로드 경로)
 5.  Jenkins 설치 (선택사항)
 
 ## Install
@@ -79,3 +78,90 @@ Vagrant ssh 접속
 ```
 vagrant ssh
 ```
+
+#### 톰캣9 설치
+
+/opt / tomcat에 홈 디렉토리가있는 새 시스템 사용자 및 그룹을 만들기
+```
+sudo apt install default-jdk
+sudo useradd -m -U -d /opt/tomcat -s /bin/false tomcat
+```
+톰캣을 설치하기 위한  unzip wget다운로드 
+```
+apt install unzip wget
+```
+/tmp 디렉토리로 이동하고 wget으로 톰캣zip 파일을 다운
+```
+cd /tmp
+
+wget http://apache.rediris.es/tomcat/tomcat-9/v9.0.10/bin/apache-tomcat-9.0.10.zip (안될경우 해당사이트가서 우클릭해서 주소링크복사하기)
+```
+톰캣 아이디추가
+```
+useradd -m -U -d /opt/tomcat -s /bin/false tomcat
+```
+
+다운로드가 완료되면 zip 파일의 압축을 풀고 / opt / tomcat 디렉토리로 이동합니다.
+
+```
+unzip apache-tomcat-*.zip
+mv apache-tomcat-*/ /opt/tomcat/
+```
+버전 및 업데이트를 더 잘 제어 할 수 있습니다, 설치 디렉토리를 가리키는 심볼릭 링크를 생성합니다.
+```
+ln -s /opt/tomcat/apache-tomcat-* /opt/tomcat/latest
+```
+
+이전에 설정 한 Tomcat 사용자는 Tomcat 9 디렉토리에 액세스. 디렉토리의 소유권을 tomcat의 사용자 및 그룹으로 변경해야합니다.
+```
+chown -R tomcat: /opt/tomcat
+```
+bin 디렉토리 내의 스크립트를 실행 가능하게 만들 것입니다.
+```
+chmod +x /opt/tomcat/latest/bin/*.sh
+```
+
+Tomcat을 서비스로 실행하려면 **tomcat.service라는 새 유닛 파일을 생성합니다.** 저장해야합니다 **/ etc / systemd / system / 디렉토리 내부** 다음 내용으로
+```
+[Unit]
+
+Description=Tomcat 9 servlet container
+
+After=network.target
+
+[Service]
+
+Type=forking
+
+User=tomcat
+
+Group=tomcat
+
+Environment="JAVA_HOME=/usr/lib/jvm/default-java"
+
+Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom"
+
+Environment="CATALINA_BASE=/opt/tomcat/latest"
+
+Environment="CATALINA_HOME=/opt/tomcat/latest"
+
+Environment="CATALINA_PID=/opt/tomcat/latest/temp/tomcat.pid"
+
+Environment="CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC"
+
+ExecStart=/opt/tomcat/latest/bin/startup.sh
+
+ExecStop=/opt/tomcat/latest/bin/shutdown.sh
+
+[Install]
+
+WantedBy=multi-user.target
+```
+
+새 단위 파일을 생성했음을 systemd에 알립니다. **Tomcat 서비스를 시작하겠습니다**
+```
+systemctl daemon-reload
+systemctl start tomcat
+systemctl status tomcat
+systemctl enable tomcat
+ufw allow 8080/tcp
