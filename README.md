@@ -1,11 +1,13 @@
+
 ## KiceCore Unbuntu 18.04 Deploy Guide
 
 **Install 목록** 
 1. vagrant 설치
 2. tomcat 9 설치 (war file 필요, maven 필요)
-3. jdk1.8 설치
-4. nginx 설치 (업로드 경로)
-5.  Jenkins 설치 (선택사항)
+3. jdk1.8 jdk,  jre설치
+4. mysql 설치
+5. nginx 설치 (업로드 경로)
+6.  Jenkins 설치 (선택사항)
 
 ## Install
 
@@ -165,3 +167,45 @@ systemctl start tomcat
 systemctl status tomcat
 systemctl enable tomcat
 ufw allow 8080/tcp
+```
+
+Java1.8 JDK JRE 다운로드
+
+```
+apt-get install openjdk-8-jre-headless
+
+apt-get install openjdk-8-jdk
+
+java -version
+```
+
+Mysql 설치 및 권한
+
+```
+apt-get install -y mysql-server ufw
+
+vim /etc/mysql/mysql.conf.d/mysqld.cnf
+
+#bind-address 127.0.0.1 <-- 주석처리
+
+service mysql restart
+
+mysql -u root -p
+
+create user 'root'@'%' identified by '123456';
+
+grant all privileges on *.* to 'root'@'%' with grant option;
+
+flush privileges;
+
+service mysql restart
+
+ufw allow out 3306/tcp
+
+ufw allow in 3306/tcp
+
+service mysql restart
+```
+
+
+
