@@ -1,5 +1,5 @@
 
-## KiceCore Unbuntu 18.04 Deploy Guide
+## Unbuntu 18.04 Deploy Guide
 
 **Install 목록** 
 1. vagrant 설치
@@ -80,7 +80,10 @@ Vagrant ssh 접속
 ```
 vagrant ssh
 ```
-
+#### 톰캣8 설치
+```
+apt-get install tomcat8
+```
 #### 톰캣9 설치
 
 /opt / tomcat에 홈 디렉토리가있는 새 시스템 사용자 및 그룹을 만들기
