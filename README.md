@@ -9,7 +9,7 @@
 5. nginx 설치 (업로드 경로)
 6.  Jenkins 설치 (선택사항)
 
-## Install
+## vagrant Install (virtualBox 있어야 사용가능 https://www.virtualbox.org/)
 
 1. vagrant 설치 (https://www.vagrantup.com/downloads)
 
