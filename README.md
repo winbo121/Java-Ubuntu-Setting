@@ -2,12 +2,38 @@
 ## Unbuntu 18.04 Deploy Guide
 
 **Install 목록** 
-1. vagrant 설치
-2. tomcat 9 설치 (war file 필요, maven 필요)
-3. jdk1.8 jdk,  jre설치
-4. mysql 설치
-5. nginx 설치 (업로드 경로)
-6.  Jenkins 설치 (선택사항)
+1. tomcat 9 설치 (war file 필요, maven 필요)
+2. jdk1.8 jdk,  jre설치
+3. mysql 설치
+4. nginx 설치 (업로드 경로)
+5.  Jenkins 설치 (선택사항)
+
+
+## Docker Install
+
+1. Docker 설치(윈도우)
+
+```
+사이트 (https://www.docker.com/products/docker-desktop/)
+```
+2. Docker 설치(우분투)
+
+```
+명령어(apt-get install docker.io)
+```
+
+### Docker 기본 명령어
+
+1. 우분투 이미지 PULL받기
+```
+docker pull ubuntu:16.04 
+```
+2. 컨테이너 생성하기 
+```
+docker run -d --privileged -p{포워딩할 임의 포트}:8080 -p{포워딩할 임의 포트}:3306 --name {컨테이너 이름} ubuntu:16.04 /sbin/init
+docker exec -it {컨테이너 이름} /bin/bash
+```
+
 
 ## vagrant Install (virtualBox 있어야 사용가능 https://www.virtualbox.org/)
 
