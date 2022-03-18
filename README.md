@@ -21,14 +21,11 @@
 ```
 명령어(apt-get install docker.io)
 ```
-
-### Docker 기본 명령어
-
-1. 우분투 이미지 PULL받기
+3. 우분투 이미지 PULL받기
 ```
 docker pull ubuntu:16.04 
 ```
-2. 컨테이너 생성하기 
+4. 컨테이너 생성하기 
 ```
 docker run -d --privileged -p{포워딩할 임의 포트}:8080 -p{포워딩할 임의 포트}:3306 --name {컨테이너 이름} ubuntu:16.04 /sbin/init
 docker exec -it {컨테이너 이름} /bin/bash
