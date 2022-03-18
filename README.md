@@ -195,6 +195,10 @@ service mysql restart
 
 mysql -u root -p
 
+show databases;
+
+use [데이터베이스 명<스키마 명>]
+
 create user 'root'@'%' identified by '123456';
 
 grant all privileges on *.* to 'root'@'%' with grant option;
