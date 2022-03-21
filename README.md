@@ -72,7 +72,7 @@ netstat -ano
 ```
 
 
-vagrantFile
+VagrantFile
 ```
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
