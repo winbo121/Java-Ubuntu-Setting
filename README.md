@@ -49,6 +49,8 @@ Vagrant를 사용하기 위해서 반드시 알아야 하는 기본 명령어들
     -   베이그런트를 프로비저닝 하기 위한 Vagrantfile을 생성한다.
 -   **vagrant up**
     -   작성된 Vagrantfile을 바탕으로 프로비저닝을 진행한다.
+-   **vagrant reload**
+    -   베이그란트에서 설정바꾼것을 적용한다.
 -   **vagrant halt**
     -   베이그런트에서 관리하는 가상 머신을 종료한다.
 -   **vagrant destroy** (조심  -> 박스 사라짐)
