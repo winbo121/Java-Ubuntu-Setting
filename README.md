@@ -110,6 +110,14 @@ Vagrant ssh 접속
 ```
 vagrant ssh
 ```
+#### 우분투 초반 업데이트 속도 올리는 방법 (카카오버전)
+```
+apt-get update
+apt-get install vim
+cp /etc/apt/sources.list /etc/apt/sources.list_back
+vi /etc/apt/sources.list
+:%s/archive.ubuntu.com/ftp.daumkakao.com (명령어 편집기 모드에서) (카카오모드 우분투)
+```
 #### 톰캣8 설치
 ```
 apt-get install tomcat8
