@@ -241,6 +241,10 @@ create user 'root'@'%' identified by '123456';
 
 grant all privileges on *.* to 'root'@'%' with grant option;
 
+create user 'kice'@'%' identified by '123456';
+
+grant all privileges on *.* to 'kice'@'%' with grant option;
+
 flush privileges;
 
 service mysql restart
