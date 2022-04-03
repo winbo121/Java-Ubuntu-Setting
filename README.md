@@ -231,6 +231,8 @@ vim /etc/mysql/mysql.conf.d/mysqld.cnf
 
 service mysql restart
 
+mysql_secure_installation
+
 mysql -u root -p
 
 show databases;
