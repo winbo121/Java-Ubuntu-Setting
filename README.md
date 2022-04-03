@@ -231,8 +231,6 @@ vim /etc/mysql/mysql.conf.d/mysqld.cnf
 
 service mysql restart
 
-mysql_secure_installation
-
 mysql -u root -p
 
 show databases;
@@ -252,6 +250,8 @@ ufw allow out 3306/tcp
 ufw allow in 3306/tcp
 
 service mysql restart
+
+mysql_secure_installation
 
 create schema [데이터베이스 명] (데이터베이스<스키마> 만들기)
 
