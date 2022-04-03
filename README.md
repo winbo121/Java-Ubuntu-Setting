@@ -260,8 +260,8 @@ mysql_secure_installation
 
 create schema [데이터베이스 명] (데이터베이스<스키마> 만들기)
 
-mysqldump -u [자신아이디] -p [스키마명] > [파일명].sql (데이터베이스 export하기)
-mysqldump -u [자신아이디] -p [스키마명] < [파일명].sql (데이터베이스 import하기)
+mysqldump(mysql) -u [자신아이디] -p [스키마명] > [파일명].sql (데이터베이스 export하기)
+mysqldump(mysql) -u [자신아이디] -p [스키마명] < [파일명].sql (데이터베이스 import하기)
 
 ```
 
