@@ -110,7 +110,7 @@ Vagrant ssh 접속
 ```
 vagrant ssh
 ```
-#### 우분투 초반 업데이트 속도 올리는 방법 (카카오버전)
+#### 우분투 Download 속도 올리는 방법 (카카오버전)
 ```
 apt-get update
 apt-get install vim
