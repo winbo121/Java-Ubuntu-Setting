@@ -124,6 +124,13 @@ cp /etc/apt/sources.list /etc/apt/sources.list_back
 vi /etc/apt/sources.list
 :%s/archive.ubuntu.com/ftp.daumkakao.com (명령어 편집기 모드에서) (카카오모드 우분투)
 ```
+#### 우분투 ssh 접근가능 명령어
+```
+vi /etc/ssh/sshd_config
+PasswordAuthentication을 yes로 수정 그리고 저장
+/etc/init.d/ssh restart
+```
+
 #### 톰캣8 설치
 ```
 apt-get install tomcat8
