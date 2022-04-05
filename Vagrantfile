@@ -7,7 +7,9 @@ CPU_COUNT = 2
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
   # config.disksize.size = '20GB'
-
+  config.ssh.username ="vagrant"
+  config.ssh.password ="vagrant"
+  config.ssh.insert_key = false
   config.vm.network "private_network", ip: "196.168.33.2"
 
   config.vm.network "forwarded_port", guest: 22, host: 4085
