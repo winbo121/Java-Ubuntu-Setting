@@ -278,5 +278,9 @@ mysqldump(mysql) -u [자신아이디] -p [스키마명] < [파일명].sql (데�
 
 ```
 
+#### GitHub key받기
 
+```
+![1](https://user-images.githubusercontent.com/39364010/187109405-7880ea28-7dd9-4333-809b-8b11e49b38db.png)
+```
 
