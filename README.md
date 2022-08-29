@@ -223,7 +223,7 @@ systemctl enable tomcat
 ufw allow 8080/tcp
 ```
 
-Java1.8 JDK JRE 다운로드
+####Java1.8 JDK JRE 다운로드
 
 ```
 apt-get install openjdk-8-jre-headless
@@ -233,7 +233,7 @@ apt-get install openjdk-8-jdk
 java -version
 ```
 
-Mysql 설치 및 권한
+####Mysql 설치 및 권한
 
 ```
 apt-get install -y mysql-server ufw
