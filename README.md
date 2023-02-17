@@ -270,7 +270,6 @@ service mysql restart
 #### Mysql 비밀번호 재설정
 ```
 mysql_secure_installation
-
 ```
 
 #### Mysql 덤프 
@@ -280,7 +279,6 @@ create schema [데이터베이스 명] (데이터베이스<스키마> 만들기)
 
 mysqldump(mysql) -u [자신아이디] -p [스키마명] > [파일명].sql (데이터베이스 export하기)
 mysqldump(mysql) -u [자신아이디] -p [스키마명] < [파일명].sql (데이터베이스 import하기)
-
 ```
 
 ## GitHub key받기
