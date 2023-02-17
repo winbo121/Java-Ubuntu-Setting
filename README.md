@@ -289,6 +289,11 @@ mysqldump(mysql) -u [자신아이디] -p [스키마명] < [파일명].sql (데�
 
 ![1](https://user-images.githubusercontent.com/39364010/187109474-377adc11-2c99-4936-882e-809cb2508204.png)
 
+![2](https://user-images.githubusercontent.com/39364010/219526631-9a1de815-6cbf-4fc3-93f2-e8d4b1aee447.png)
 
+![3](https://user-images.githubusercontent.com/39364010/219526645-945ed22d-7ee4-4cda-9c4f-be45f7fb8e29.png)
 
+![4](https://user-images.githubusercontent.com/39364010/219526653-676f4892-5f77-45c3-8626-776b67685a48.png)
+
+![5](https://user-images.githubusercontent.com/39364010/219526667-f1a02648-9fc5-4bfd-be76-88468f71dd24.png)
 
