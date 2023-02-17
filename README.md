@@ -1,14 +1,5 @@
 
-## Unbuntu Deploy Guide
-
-**Install 목록** 
-1. tomcat 9 설치 (war file 필요, maven 필요)
-2. jdk1.8 jdk,  jre설치
-3. mysql 설치
-4. nginx 설치 (업로드 경로)
-5.  Jenkins 설치 (선택사항)
-
-
+# Unbuntu Deploy Guide
 
 ### Docker 설치방법
 
