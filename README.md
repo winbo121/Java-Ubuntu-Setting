@@ -58,13 +58,9 @@ vagrant init
 
 #### vagrantFile 포트포워딩  관련 사용중인 포트확인
 
-cmd open
-```
-netstat -ano
-```
 
 
-VagrantFile
+#### VagrantFile
 ```
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
@@ -97,20 +93,17 @@ end
 ```
 
 
-Vagrant 시작
-```
-vagrant plugin install vagrant-winnfsd
-```
-
-NFS가 없어서 Vagrant 안되는 경우 
+#### Vagrant 시작
 ```
 vagrant up
+vagrant plugin install vagrant-winnfsd (NFS가 없어서 Vagrant 안되는 경우 )
 ```
 
-Vagrant ssh 접속
+#### Vagrant ssh 접속
 ```
 vagrant ssh
 ```
+
 #### 우분투 Download 속도 올리는 방법 (카카오버전)
 ```
 apt-get update
@@ -119,6 +112,7 @@ cp /etc/apt/sources.list /etc/apt/sources.list_back
 vi /etc/apt/sources.list
 :%s/archive.ubuntu.com/ftp.daumkakao.com (명령어 편집기 모드에서) (카카오모드 우분투)
 ```
+
 #### 우분투 ssh 접근가능 명령어
 ```
 vi /etc/ssh/sshd_config
