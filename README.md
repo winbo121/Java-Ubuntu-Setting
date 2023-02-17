@@ -288,3 +288,101 @@ mysqldump(mysql) -u [자신아이디] -p [스키마명] < [파일명].sql (데�
 
 ![5](https://user-images.githubusercontent.com/39364010/219526667-f1a02648-9fc5-4bfd-be76-88468f71dd24.png)
 
+## Jenkins 설치 및 구동
+```
+apt-get install -y sudo apt-transport-https ca-certificates
+
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add - 
+
+(wget --no-check-certificate  -vO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add -) <- 위의것이 안될경우
+
+sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+apt-get update
+```
+
+#### Jenkins 설치
+```
+apt-get install jenkins  
+
+service jenkins status
+```
+
+#### Jenkins 포워딩 포트 변경
+```
+vi /etc/default/jenkins
+
+HTTP_PORT=8080 -> HTTP_PORT=9000 (변경)
+```
+
+#### Jenkins 접속 권한 변경
+```
+vi /etc/sudoers
+
+root ALL=(ALL:ALL) ALL 밑에 -> jenkins ALL=(ALL:ALL) NOPASSWD: ALL 추가
+
+service jenkins restart
+```
+
+#### Jenkins 비밀번호 확인 (사이트 들어가자 마자 바로 넣을 비번)
+```
+cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+#### Jenkins 구동을 위한 shell스크립트 작성
+```
+cd /home/
+
+vi deploy.sh
+
+------------------------------ (작성)
+echo "start kice core deploy"
+
+cd /var/lib/jenkins/workspace/test5/test5/
+
+mvn clean install
+
+cd /var/lib/jenkins/workspace/test5/test5/target/
+
+mv test5-1.0.0.war test5.war
+
+mv test5.war /var/lib/tomcat8/webapps/
+
+echo "end kice core deploy"
+------------------------------ (작성)
+
+
+--------------------------------------<<쉘 스크립트 부가설명>>------------------------------------------
+
+echo "start kice core deploy"
+
+cd /var/lib/jenkins/workspace/test5/test5/ (pom.xml 있는 안쪽 프로젝트까지 들어가기)
+
+mvn install (maven 에서 제공하는 명령어 이고 pom.xml이 있어야 작동된다) 
+
+cd /var/lib/jenkins/workspace/test5/test5/target/ (mvn 인스톨시 타겟 파일 안에 war파일이 생긴다) 
+
+ex) 해당 프로젝트에 pom.xml에 들어가면 그룹 아이디에 war파일 생기는 방식 
+###################################
+<groupId>test5</groupId>
+	<artifactId>test5</artifactId>
+	<packaging>war</packaging>
+	<version>1.0.0</version>
+	<name>test5</name>
+<url>http://www.egovframe.go.kr</url>
+------> test5-1.0.0.war ( artifactId-version.war 형식)
+###################################
+
+
+mv test5-1.0.0.war test5.war (파일명 변경)
+
+mv test5.war /var/lib/tomcat8/webapps/ (톰캣으로 파일을 옮기기)
+
+echo "end kice core deploy"
+
+---------------------------------------------------------------------------------------------------------
+
+```
+
+
+
