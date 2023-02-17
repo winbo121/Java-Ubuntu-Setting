@@ -1,5 +1,5 @@
 
-# Unbuntu Deploy Guide
+# *Unbuntu Deploy Guide*
 
 ### Docker 설치방법
 
@@ -289,6 +289,8 @@ mysqldump(mysql) -u [자신아이디] -p [스키마명] < [파일명].sql (데�
 ![5](https://user-images.githubusercontent.com/39364010/219526667-f1a02648-9fc5-4bfd-be76-88468f71dd24.png)
 
 ## Jenkins 설치 및 구동
+
+#### Jenkins 설치 하기전 
 ```
 apt-get install -y sudo apt-transport-https ca-certificates
 
