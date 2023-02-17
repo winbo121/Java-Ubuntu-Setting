@@ -136,10 +136,22 @@ PasswordAuthentication을 yes로 수정 그리고 저장
 /etc/init.d/ssh restart
 ```
 
+#### Java1.8 JDK JRE 다운로드
+```
+apt-get install openjdk-8-jre-headless
+
+apt-get install openjdk-8-jdk
+
+java -version
+```
+
 #### 톰캣8 설치
 ```
 apt-get install tomcat8
 ```
+
+
+
 #### 톰캣9 설치
 
 /opt / tomcat에 홈 디렉토리가있는 새 시스템 사용자 및 그룹을 만들기
@@ -226,16 +238,6 @@ systemctl start tomcat
 systemctl status tomcat
 systemctl enable tomcat
 ufw allow 8080/tcp
-```
-
-#### Java1.8 JDK JRE 다운로드
-
-```
-apt-get install openjdk-8-jre-headless
-
-apt-get install openjdk-8-jdk
-
-java -version
 ```
 
 #### Mysql 설치 및 권한
