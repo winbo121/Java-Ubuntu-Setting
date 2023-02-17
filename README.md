@@ -118,7 +118,7 @@ PasswordAuthentication을 yes로 수정 그리고 저장
 /etc/init.d/ssh restart
 ```
 
-## JAVA 및 TOMCAT 설치
+## JAVA 및 Tomcat 설치
 
 #### Java1.8 JDK JRE 다운로드
 ```
