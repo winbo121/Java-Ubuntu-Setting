@@ -153,10 +153,6 @@ cd /tmp
 
 wget http://apache.rediris.es/tomcat/tomcat-9/v9.0.10/bin/apache-tomcat-9.0.10.zip (안될경우 해당사이트가서 우클릭해서 주소링크복사하기)
 ```
-톰캣 아이디추가
-```
-useradd -m -U -d /opt/tomcat -s /bin/false tomcat
-```
 
 다운로드가 완료되면 zip 파일의 압축을 풀고 / opt / tomcat 디렉토리로 이동합니다.
 
