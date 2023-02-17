@@ -394,5 +394,28 @@ echo "end kice core deploy"
 
 ```
 
+#### Jenkins 사이트 구동방법
+
+![6](https://user-images.githubusercontent.com/39364010/219535933-fd56e2c8-86f6-4f99-80cb-a9d1c7ed435c.png)
+
+![7](https://user-images.githubusercontent.com/39364010/219535952-fc846b3e-5f91-43a1-9ce1-ca5a98dc1f8c.png)
+
+![8](https://user-images.githubusercontent.com/39364010/219535963-f7bdc41b-9a9c-4286-abd4-3cfcd835406c.png)
+
+![9](https://user-images.githubusercontent.com/39364010/219535969-6eb73d74-a9e3-41ab-b2ce-7e6be3da3a17.png)
+
+![10](https://user-images.githubusercontent.com/39364010/219535975-3ba8cb73-4fdf-4f69-a5d8-6dd9232cfbf7.png)
+
+![11](https://user-images.githubusercontent.com/39364010/219535984-24198ea7-98d9-4ebd-97ef-994c230b6bef.png)
+
+![12](https://user-images.githubusercontent.com/39364010/219535996-24ad4a38-4697-443b-bc3d-90f23bb64700.png)
+
+![13](https://user-images.githubusercontent.com/39364010/219536007-71a93f5c-3902-47c6-99e2-9b726514bcb1.png)
+
+![14](https://user-images.githubusercontent.com/39364010/219536019-4d0cac63-215a-48a4-a81b-0c0693a56ad2.png)
+
+![15](https://user-images.githubusercontent.com/39364010/219536025-90af2c64-d274-47a3-bef2-14ef455a13d2.png)
+
+
 
 
