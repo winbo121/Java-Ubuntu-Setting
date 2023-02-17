@@ -56,11 +56,9 @@ Vagrant를 사용하기 위해서 반드시 알아야 하는 기본 명령어들
 vagrant init
 ```
 
-#### vagrantFile 포트포워딩  관련 사용중인 포트확인
 
 
-
-#### VagrantFile
+#### VagrantFile에 복사 붙이기
 ```
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
