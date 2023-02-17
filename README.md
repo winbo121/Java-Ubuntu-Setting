@@ -215,13 +215,14 @@ ExecStop=/opt/tomcat/latest/bin/shutdown.sh
 WantedBy=multi-user.target
 ```
 
-#### 새 단위 파일을 생성했음을 systemd에 알립니다. 
+새 단위 파일을 생성했음을 systemd에 알립니다. 
 ```
 systemctl daemon-reload
 systemctl start tomcat
 systemctl status tomcat
 systemctl enable tomcat
 ufw allow 8080/tcp
+/opt/tomcat/apache-tomcat-9.0.71/webapps/war파일배포
 ```
 
 ## Mysql 설치 및 설정
