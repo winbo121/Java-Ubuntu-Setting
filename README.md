@@ -1,5 +1,5 @@
 
-## Unbuntu 18.04 Deploy Guide
+# Unbuntu Deploy Guide
 
 **Install 목록** 
 1. tomcat 9 설치 (war file 필요, maven 필요)
