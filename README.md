@@ -307,10 +307,16 @@ apt-get update
 
 #### Jenkins 설치
 ```
-apt-get install jenkins  
-
+apt-get install jenkins
+ 
 service jenkins status
 ```
+
+#### war파일 만드는 maven 설치
+```
+apt-get install maven  
+```
+
 
 #### Jenkins 포워딩 포트 변경
 ```
