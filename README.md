@@ -109,6 +109,11 @@ end
 
 Vagrant 시작
 ```
+vagrant plugin install vagrant-winnfsd
+```
+
+NFS가 없어서 Vagrant 안되는 경우 
+```
 vagrant up
 ```
 
