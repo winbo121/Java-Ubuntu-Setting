@@ -1,5 +1,5 @@
 
-# Unbuntu Deploy Guide
+## Unbuntu Deploy Guide
 
 **Install 목록** 
 1. tomcat 9 설치 (war file 필요, maven 필요)
@@ -9,7 +9,6 @@
 5.  Jenkins 설치 (선택사항)
 
 
-## Docker Install
 
 ### Docker 설치방법
 
@@ -285,11 +284,11 @@ mysqldump(mysql) -u [자신아이디] -p [스키마명] < [파일명].sql (데�
 
 ```
 
-#### GitHub key받기
+### GitHub key받기
 
-```
+
 ![1](https://user-images.githubusercontent.com/39364010/187109474-377adc11-2c99-4936-882e-809cb2508204.png)
-```
+
 
 
 
