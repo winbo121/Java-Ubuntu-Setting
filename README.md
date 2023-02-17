@@ -118,6 +118,8 @@ PasswordAuthentication을 yes로 수정 그리고 저장
 /etc/init.d/ssh restart
 ```
 
+## JAVA 및 TOMCAT 설치
+
 #### Java1.8 JDK JRE 다운로드
 ```
 apt-get install openjdk-8-jre-headless
@@ -213,7 +215,7 @@ ExecStop=/opt/tomcat/latest/bin/shutdown.sh
 WantedBy=multi-user.target
 ```
 
-새 단위 파일을 생성했음을 systemd에 알립니다. **Tomcat 서비스를 시작하겠습니다**
+#### 새 단위 파일을 생성했음을 systemd에 알립니다. 
 ```
 systemctl daemon-reload
 systemctl start tomcat
@@ -222,17 +224,23 @@ systemctl enable tomcat
 ufw allow 8080/tcp
 ```
 
-#### Mysql 설치 및 권한
+## Mysql 설치 및 설정
 
+#### Mysql 설치
 ```
 apt-get install -y mysql-server ufw
-
+```
+#### Mysql 로컬주소 바인딩 주석
+```
 vim /etc/mysql/mysql.conf.d/mysqld.cnf
 
 #bind-address 127.0.0.1 <-- 주석처리
 
 service mysql restart
+```
 
+#### Mysql 접속 및 권한주기
+```
 mysql -u root -p
 
 show databases;
@@ -256,9 +264,12 @@ ufw allow out 3306/tcp
 ufw allow in 3306/tcp
 
 service mysql restart
+```
 
+#### Mysql 비밀번호 재설정
+```
 mysql_secure_installation
-
+```
 
 create schema [데이터베이스 명] (데이터베이스<스키마> 만들기)
 
