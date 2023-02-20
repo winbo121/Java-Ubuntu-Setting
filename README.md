@@ -412,7 +412,7 @@ echo "end kice core deploy"
 
 ![13](https://user-images.githubusercontent.com/39364010/219536007-71a93f5c-3902-47c6-99e2-9b726514bcb1.png)
 
-![14](https://user-images.githubusercontent.com/39364010/219536019-4d0cac63-215a-48a4-a81b-0c0693a56ad2.png)
+![Inked14](https://user-images.githubusercontent.com/39364010/220054976-a23c1017-4af5-49b8-a2bc-e0096475c211.jpg)
 
 ![15](https://user-images.githubusercontent.com/39364010/219536025-90af2c64-d274-47a3-bef2-14ef455a13d2.png)
 
